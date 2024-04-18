@@ -1,0 +1,376 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "aleo";
+}
+
+
+html, body{
+    background-color: antiquewhite;
+    scroll-behavior: smooth;
+}
+
+.video-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.youtube-video{
+    width: 100%;
+    height: 35rem;
+    margin-bottom: 5rem;
+}
+
+.maps{
+    width: 100%;
+}
+
+
+.navigation{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+.navigation-home{
+    color: black;
+    text-decoration: none;
+}
+
+.navigation-name{
+    margin-left: 2rem ;
+}
+
+.navigation-container{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    margin-right: 4rem;
+}
+
+.navigation-links{
+    text-decoration: none;
+    color: black;
+    font-family: "aleo";
+    font-weight: bold;
+}
+
+/* Hero Container */
+.hero-container{
+    background-image: url(./assets/hero.JPG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Hero Wrapper */
+.hero-wrapper{
+    margin-bottom: 30rem;
+}
+
+/* Hero Title */
+.hero-container h1{
+    font-size: clamp(2rem, 6vw, 6vw);
+    color: rgb(0, 0, 0);
+}
+
+/* Hero Text */
+.hero-container p{
+    display: flex;
+    flex-direction: column;
+    color: black;   
+    font-size: clamp(1rem, 2vw, 2vw);
+    text-align: center;
+}
+
+/* Content Container */
+.content-container{
+    height: 100vh;
+    opacity: 0;
+    transform: translateY(5rem);
+    transition: all 3s;
+}
+
+.content-container.visible{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Content Container for the list */
+.content-container ul{
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+}
+
+/* Content List */
+.content-container li{
+    list-style: none;
+}
+
+/* Content Title */
+.content-container h1{
+    font-size: clamp(2rem, 5vw, 5vw);
+    text-align: center;
+}
+
+/* Content Paragraph */
+.content-container p{
+    margin-top: 2rem;
+}
+
+/* Content Image */
+.content-container img{
+    width: 100%;
+    max-width: 60rem;
+    height: auto;
+    box-shadow: 0 0 20px 0 black;
+}
+
+/* Content Media Querries  */
+@media screen and (min-width: 1200px) {
+    .content-container ul{
+        flex-direction: row;
+        margin: 5rem;
+    }
+
+    .content-container p{
+        margin-left: 5rem;
+        margin-top: 0;
+    }
+}
+
+/* Cards Container */
+.cards-container{
+    min-height: 50vh;
+    margin-inline: 2rem;
+    opacity: 0;
+    transform: translateY(5rem);
+    transition: all 3s;
+}
+
+.cards-container.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cards Title */
+.cards-container h1{
+    font-size: clamp(2rem, 5vw, 5vw);
+    text-align: center;
+}
+
+/* Card List */
+.card-container li{
+    list-style: none;
+}
+
+/* Card Images */
+.cards-container img{
+    border-bottom: 0.25rem solid #ff7700;
+    border-radius: 0.25rem 0.25rem 0 0;
+    height: auto;
+    width: 100%;
+}
+
+/* Cards */
+.card {
+    box-shadow: 0rem 0.125rem 1.5rem rgb(0, 0, 0 / 12%);
+    background-color: white;
+    border-radius: 0.25rem;
+    flex: 1;
+    width: 100%;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 5px 0 black;
+  }
+
+.card-content{
+    padding: 1rem;
+}
+
+/* Card Media Querries for tablets */
+@media screen and (min-width: 768px) {
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .card {
+        flex-basis: calc(50% - 1rem);
+        margin: 0.5rem;
+    }
+    
+    img {
+        min-height: 15.5rem;
+    }
+    }
+    
+/* Card Media Querries for larger screens */
+@media screen and (min-width: 1200px) {
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+        .card {
+            flex-basis: calc(33.333% - 20px);
+            margin: 0.5rem;
+        }
+    
+    
+    img {
+        min-height: 16.375rem;
+    }
+}
+
+/* Video-container */
+.video-container{
+   min-height: 60vh;
+   margin-top: 5rem;
+}
+
+/* Video Title */
+.video-container h1{
+    font-size: clamp(2rem, 5vw, 5vw);
+    text-align: center;
+}
+
+/* Video iFrame */
+.video-yt{
+    width: 20rem;
+    height: auto;
+    box-shadow: 0 0 20px 0 black;
+}
+
+/* Video Media Querries */
+@media screen and (min-width: 1200px) {
+    .video-yt{
+        width: 80rem;
+        max-width: 100rem;
+        height: 40rem;
+    }
+}
+
+/* Accordion Container */
+.accordion-container{
+    min-height: 50vh;
+}
+
+.accordion-wrapper{
+    margin: 0;
+}
+
+/* Accordion List */
+.accordion-container li{
+    list-style: none;
+}
+
+/* Accordion Button */
+.accordion-container button{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 1rem;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+
+/* Accordion Plus Symbol */
+.accordion-container .accordion .symbol::before{
+    content: "+";
+}
+
+/* Accordion Minus Symbol */
+.accordion-container .accordion.active .symbol::before{
+    content: "-";
+}
+
+/* Accordion Paragraph */
+.accordion-container p{
+    font-size: 20px;
+}
+
+/* Accordion panel not active */
+.accordion-container .accordion .panel{
+    height: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
+    transition: all 0.4s;
+    border: 1px black solid;
+}
+
+/* Accordion panel active */
+.accordion-container .accordion.active .panel{
+    min-height: 115px;
+    padding: 2rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .accordion-wrapper{
+        margin: 5rem;
+    }
+}
+
+/* Footer Container */
+.footer-container{
+    min-height: 50vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-container ul{
+    display: flex;
+    flex-direction: column;
+    margin: 5rem;
+}
+
+/* Footer Title */
+.footer-container h2{
+    color: white;
+    font-size: 3rem;
+}
+
+.footer-container p{
+    color: white;
+    margin: 1rem 1rem 2rem 0;
+}
+
+.footer-map{
+    width: 100%;
+    height: auto;
+    margin: 5rem;
+}
+
+@media screen and (min-width: 1200px){
+
+    .footer-container{
+        flex-direction: row;
+    }
+
+    .footer-map{    
+        max-width: 40rem;
+        height: 20rem;
+        margin-inline: 5rem;
+    }
+}
